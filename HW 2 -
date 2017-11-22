@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int type_of_room, area_of_room, width_of_room_1, width_of_room_2, length_of_room_2, radius_of_room;
+	cout << "Haverly's Room Calculator: \n***********************************\n";
+	cout << "1. Square Room \n2. Rectangular Room \n3. Round Room \n4. Quit \n";
+	cout << "\nType of Room: ";
+	cin >> type_of_room;
+	//this is going to be fun (sarcasm)
+	switch (type_of_room)
+	{
+		case 1: 
+			//square room
+			cout << "Please enter the width of the room. ";
+			cin >> width_of_room_1;
+			area_of_room = width_of_room_1 * width_of_room_1;
+			cout << "\nSquare Room \nArea of Room = " << area_of_room << " sq/ft.\n" << endl;
+			break;
+		case 2:
+			//rectangular room
+			cout << "Please enter the width and length. ";
+			cin >> width_of_room_2 >> length_of_room_2;
+			area_of_room = width_of_room_2 * length_of_room_2;
+			cout << "\nRectangle Room \nArea of Room = " << area_of_room << " sq/ft.\n" << endl;
+			break;
+		case 3: 
+			//round room
+			cout << "Please enter the radius. ";
+			cin >> radius_of_room;
+			area_of_room = 3.14 * (radius_of_room * radius_of_room);
+			cout << "\nRound Room \nArea of Room = " << area_of_room << " sq/ft.\n";
+			break;
+		case 4:
+			//quit the program
+			cout << "\nNow exiting the program.\n";
+			exit(0);
+			break;
+		default: cout << "Thank you for using Haverly's Room Calculator. Exiting program.";
+			
+	}
+
+}
